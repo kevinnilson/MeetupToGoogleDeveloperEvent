@@ -1,0 +1,35 @@
+{
+  "name": "Create Google Developer Event from Meetup",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "A simple to that adds a button to a meetup event that recreates the meetup as a Google+ Event.  Written by Kevin Nilson www.javaclimber.com",
+  "background" : {
+    "scripts": ["background.js"]
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://www.meetup.com/*/events/*",
+        "https://www.meetup.com/*/events/*"
+      ],
+      "js" : ["meetupContentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    },
+    {
+      "matches" : [
+        "https://developers.google.com/events/createevent?event_type=event"
+      ],
+      "js" : ["googlePlusContentscript.js"],
+      "run_at" : "document_idle",
+      "all_frames" : false
+    }
+  ],
+//  "browser_action": {
+//    "default_icon": "icon.png",
+//    "default_popup": "popup.html"
+//  },
+  "permissions": [
+    "http://api.meetup.com/","https://developers.google.com/events","tabs","background"
+  ]
+}
