@@ -3,7 +3,7 @@ MeetupToGoogleDeveloperEvent
 
 Takes a Meetup event and creates a Google Developer Event at https://developers.google.com/events/
 
-=Quick Instructions=
+**Quick Instructions**
 ------------------
 git clone https://github.com/kevinnilson/MeetupToGoogleDeveloperEvent.git
 
@@ -26,4 +26,5 @@ https://developers.google.com/events/createevent?event_type=event
 
 Verify Details and Click Create Event
 
-You will now see you event at https://developers.google.com/events/
+You will now see you event at:
+https://developers.google.com/events/
